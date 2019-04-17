@@ -39,7 +39,7 @@ app.get('/',(request, response) => {
 app.post('/displaycards', async (request, response) => {
     try {
         var number_cards = request.body.number_cards;
-        var deck = setTimeout(await axios.get(`https://deckofcardsapi.com/api/deck/new/draw/?count=${number_cards}`), 5000);
+        var deck = await axios.get(`https://deckofcardsapi.com/api/deck/new/draw/?count=${number_cards}`);
         var count = deck.data.cards.length;
         console.log(count);
         var images = '';
@@ -73,7 +73,7 @@ app.get('/nasa',(request, response) => {
 app.post('/displaynasa', async (request, response) => {
     try {
         var images_to_search = request.body.image_to_search;
-        var deck = setTimeout(await axios.get('https://images-api.nasa.gov/search?q=' + encodeURIComponent(images_to_search)), 5000);
+        var deck = await axios.get('https://images-api.nasa.gov/search?q=' + encodeURIComponent(images_to_search));
         var images = '';
         for(var i = 0; i < 4; i++) {
             var item = deck.data.collection.items[i].links[0].href;
