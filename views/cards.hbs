@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>{{title}}</title>
+</head>
+<body style="background-image: url('https://ew1rnkpr02250stogros.blob.core.windows.net/media/Grosvenor/sideGames/Background/gc-game-background-1280x800-Blackjack-Realistic.png'); background-size: cover">
+<div class="container" style="background: rgba(255, 255, 240, 0.7); padding-bottom: 300px">
+<h1 class="d-flex justify-content-center">{{header}}</h1>
+
+<form action ="/displaycards" method="POST">
+
+    <div>
+        <label for="number_cards">Number of cards:</label>
+        <input type="text" id="number_cards" name="number_cards" placeholder="number_cards">
+    </div>
+    <button type="submit"> Display </button>
+</form>
+{{{cards}}}
+</div>
+</body>
+    {{> footer}}
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</html>
